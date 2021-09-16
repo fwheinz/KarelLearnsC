@@ -66,7 +66,6 @@ void move()
         }
     }
        #if BUILD == WINDOWS_BUILD || BUILD == UNIX_BUILD
-    draw();
        #endif // WINDOWS_BUILD
 }
 
@@ -87,7 +86,6 @@ void turnLeft()
         }
         world.angle += A_LEFT_TURN;
         #if BUILD == WINDOWS_BUILD || BUILD == UNIX_BUILD
-            draw();
             SDL_Delay(500/ (world.speed * 2));
         #endif // WINDOWS_BUILD
     }
@@ -187,7 +185,6 @@ void pickBeeper()
             #if BUILD == WINDOWS_BUILD || BUILD == UNIX_BUILD
                 if ((--world.worldInformation[karel.x][karel.y].beeper) == 0)
                     removeFromScreen(ENTITY_BEEPER);
-                draw();
                 SDL_Delay(500/ ((world.speed == 0 ? 1 : world.speed) * 2));
             #endif // WINDOWS_BUILD
         }
@@ -195,7 +192,6 @@ void pickBeeper()
         {
             karel.error = 1;
             #if BUILD == WINDOWS_BUILD || BUILD == UNIX_BUILD
-                draw();
             #endif // WINDOWS_BUILD
 
         }
@@ -210,7 +206,6 @@ void putBeeper()
         {
             karel.error = 1;
             #if BUILD == WINDOWS_BUILD || BUILD == UNIX_BUILD
-                draw();
             #endif // WINDOWS_BUILD
             return;
         }
@@ -237,7 +232,6 @@ void putBeeper()
             }
         }
         #if BUILD == WINDOWS_BUILD || BUILD == UNIX_BUILD
-            draw();
             SDL_Delay(500/ ((world.speed == 0 ? 1 : world.speed) * 2));
         #endif // WINDOWS_BUILD
     }

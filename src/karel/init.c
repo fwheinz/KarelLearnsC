@@ -19,7 +19,8 @@ void init(char *title)
 
     const char* envvars = "SDL_VIDEO_WINDOW_POS=4,26";
     SDL_putenv(envvars);
-	screen = SDL_SetVideoMode(SCREEN_WIDTH, SCREEN_HEIGHT, 0, SDL_HWPALETTE|SDL_DOUBLEBUF);
+//	screen = SDL_SetVideoMode(SCREEN_WIDTH, SCREEN_HEIGHT, 0, SDL_HWPALETTE|SDL_DOUBLEBUF);
+	screen = SDL_SetVideoMode(SCREEN_WIDTH, SCREEN_HEIGHT, 0, SDL_HWPALETTE|SDL_HWSURFACE);
 
 	if (screen == NULL)
 	{

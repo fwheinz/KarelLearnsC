@@ -134,6 +134,7 @@ void getInput() {
 			break;
 		}
 	}
+    draw();
 
 	/*
 	 * 		get mouse coordinates

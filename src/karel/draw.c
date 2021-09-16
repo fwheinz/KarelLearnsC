@@ -24,6 +24,8 @@ void draw() {
 	drawKarel();
 
 	SDL_Flip(screen);
+static int dc = 0;
+    printf("Draw %d\n", dc++);
 
 	SDL_Delay(1);
 }
